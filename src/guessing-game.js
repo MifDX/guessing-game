@@ -3,15 +3,16 @@ class GuessingGame {
 
     setRange(min, max) {
         this.min = min;
-        this.max = max
+        this.max = max;
+
     }
 
     guess() {
-return Math.round((this.max - this.min) / 2) + this.min;
+return Math.round((this.min + this.max) / 2);
     }
 
     lower() {
-this.max - this.guess();
+this.max = this.guess();
     }
 
     greater() {
